@@ -28,7 +28,7 @@ export async function POST(request: Request) {
            //CREATE TOKEN DATA
         const tokenData = {
         id: userFound._id,
-        username: userFound.username,
+        username: userFound?.username,
         email: userFound.email,
         }
         const token = await jwt.sign(tokenData, process.env.TOKEN_SECRET!, { expiresIn: '1d'})
