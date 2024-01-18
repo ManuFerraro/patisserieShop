@@ -10,7 +10,7 @@ const ProfilePage = async() => {
   
   return (
     <main>
-      <Profile user={user} />
+      {/* <Profile user={user} /> */}
     </main>
   )
 }
