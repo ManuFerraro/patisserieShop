@@ -7,7 +7,7 @@ import mongoose from 'mongoose';
  * 3 = disconnecting
  */
 const mongoConnection = {
-    isConnected: 0
+    isConnected: 1
 }
 
 export const connectDB = async() => {
@@ -28,9 +28,9 @@ export const connectDB = async() => {
         await mongoose.disconnect();
     }
 
-    await mongoose.connect( 'mongodb+srv://mannprogrammingok:5mffOVXjSdlIHRr7@cluster0.r7fsdz6.mongodb.net/' || '');
+    await mongoose.connect( process.env.MONGO_URL || '');
     mongoConnection.isConnected = 1;
-    console.log('Conectado a MongoDB:', 'mongodb+srv://mannprogrammingok:5mffOVXjSdlIHRr7@cluster0.r7fsdz6.mongodb.net/' );
+    console.log('Conectado a MongoDB:', process.env.MONGO_URL );
 }
 
 export const disconnectDB = async() => {
