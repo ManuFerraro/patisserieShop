@@ -141,7 +141,7 @@ const LeftMenu = ({ user, success}: Params) => {
                 success ? 
               
               <div className="w-full h-1/2 flex flex-col justify-center items-center pt-2">
-                <h1 className="text-gray-700 font-bold">{user.username}</h1>
+                <h1 className="text-gray-700 font-bold">{user?.username}</h1>
                 <h1 className="text-gray-500 text-sm">Dolores, ARG</h1>
               </div>
               :

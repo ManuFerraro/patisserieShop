@@ -9,7 +9,7 @@ import { sendEmail } from "@/lib/helpers/mailer";
 
 
 export async function POST(request: Request) {
-    const { username, email, password } = await request.json();
+    const { username = "asd", email, password } = await request.json();
     try {
        
       await connectDB();
