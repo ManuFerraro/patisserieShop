@@ -38,8 +38,8 @@ export const sendEmail = async({email, emailType, userId}: Params) => {
             from: 'manuelferrarook@gmail.com',
             to: email,
             subject: emailType === "VERIFY" ? "Verify your email" : "Reset your password",
-            html: emailType === 'VERIFY' ? `<p>Click <a href="${process.env.DOMAIN}/login/resetPassword/?token=${hashedToken}">here</a> to verify your email or copy and paste the link below in your browser. <br> ${process.env.DOMAIN}/login/resetPassword/?token=${hashedToken} </p>`
-                : `<p>Click <a href="${process.env.DOMAIN}/login/resetPassword/?token=${hashedToken}">here</a> to verify your email or copy and paste the link below in your browser. <br> ${process.env.DOMAIN}/login/resetPassword/?token=${hashedToken} </p>`
+            html: emailType === 'VERIFY' ? `<p>Click <a href="asd/login/resetPassword/?token=${hashedToken}">here</a> to verify your email or copy and paste the link below in your browser. <br> asd/login/resetPassword/?token=${hashedToken} </p>`
+                : `<p>Click <a href="asd/login/resetPassword/?token=${hashedToken}">here</a> to verify your email or copy and paste the link below in your browser. <br> asd/login/resetPassword/?token=${hashedToken} </p>`
            
         }
 
