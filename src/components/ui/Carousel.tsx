@@ -57,7 +57,7 @@ const Carousel = () => {
 
   return (
     <section className='w-screen'>
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-x-hidden">
         <div className={`w-[300vw]  flex transition-transform ease-out duration-400`}
         style={{
             transform: `translateX(-${current * 33.3}%)`,
