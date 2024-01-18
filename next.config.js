@@ -8,11 +8,7 @@ const nextConfig = {
         // your project has ESLint errors.
         ignoreDuringBuilds: true,
       },
-      env: {
-		MONGO_URL: process.env.MONGO_URL,
-		TOKEN_SECRET: process.env.TOKEN_SECRET,
-		DOMAIN: process.env.DOMAIN
-	},
+      
 }
 
 module.exports = nextConfig
