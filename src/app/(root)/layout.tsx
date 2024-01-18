@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
+import '../globals.css'
 import TopBar from '@/components/shared/TopBar'
 import NavBar from '@/components/shared/NavBar'
+import Carousel from '@/components/ui/Carousel'
+
+import { LeftMenuContextProvider } from '../Context/menuLeft'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,13 +22,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      <LeftMenuContextProvider>
        <nav>
          <TopBar />
          <NavBar />
+         
+         <section>
+            <Carousel />
+         </section>
        </nav>
          <main>
+           
             {children}
+           
          </main>
+         </LeftMenuContextProvider>
       </body>
     </html>
   )
