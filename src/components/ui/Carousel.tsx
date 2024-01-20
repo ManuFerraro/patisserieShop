@@ -88,7 +88,7 @@ const Carousel = () => {
               <div className="flex justify-center items-center mt-6">
               <button className="w-[100px] h-[35px] sm:w-[140px] sm:h-[50px] text-lg  sm:text-xl bg-BgTop rounded-3xl text-center text-white">VER MÁS</button>
               </div>
-           </div>
+           </div> 
              ))
            }     
         </div>
